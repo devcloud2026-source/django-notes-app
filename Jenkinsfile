@@ -6,6 +6,8 @@ pipeline {
             steps {
                 echo "Cloning the code"
                 git url:'https://github.com/devcloud2026-source/django-notes-app.git'
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/devcloud2026-source/django-notes-app.git'
+                
             }
         }
         stage("Build"){
